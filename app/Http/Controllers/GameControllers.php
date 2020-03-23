@@ -47,7 +47,10 @@ class GameControllers extends Controller
         $load = $skill->save();
         if ($load){
             return redirect()->route("skills.index");
-            // $skills = Skill::all();
+           
+        } else {
+          
+            return redirect()->route("skills.store");
         }
       
     }
