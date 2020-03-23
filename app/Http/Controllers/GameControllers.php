@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Skill;
 
 class GameControllers extends Controller
 {
@@ -12,9 +13,9 @@ class GameControllers extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
-    }
+    {   
+        $skills = Skill::all();
+        return view("skillsIndex",compact("skills"));    }
 
     /**
      * Show the form for creating a new resource.
