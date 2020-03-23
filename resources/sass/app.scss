@@ -4,4 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-// 
+body {
+    width: 100%;
+}
+.wrap-skills {
+    display: flex;
+    flex-wrap: wrap;
+    .skill {
+        width: 30%;
+    }
+}

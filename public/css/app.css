@@ -10888,3 +10888,16 @@ a.text-dark:focus {
   box-sizing: border-box;
 }
 
+body {
+  width: 100%;
+}
+
+.wrap-skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrap-skills .skill {
+  width: 30%;
+}
+
