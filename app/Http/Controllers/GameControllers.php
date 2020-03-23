@@ -35,7 +35,21 @@ class GameControllers extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $skill = new Skill;
+
+        $skill->name = $data["name"];
+        $skill->lifePoints = $data["lifePoints"];
+        $skill->role = $data["role"];
+        $skill->attack = $data["attack"];
+        $skill->defense = $data["defense"];
+        
+        $load = $skill->save();
+        if ($load){
+            return redirect()->route("skills.create");
+            // $skills = Skill::all();
+        }
+      
     }
 
     /**

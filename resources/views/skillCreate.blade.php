@@ -17,5 +17,14 @@
         <input type="number" name = "defense" value="" placeholder="val defense">
         <button type="submit">Crea</button>
     </form>
+    {{-- @foreach ($skills as $skill)
+        <ul>
+        <li>{{$skill->name}}</li>
+        <li>{{$skill->lifePoints}}</li>
+        <li>{{$skill->role}}</li>
+        <li>{{$skill->attack}}</li>
+        <li>{{$skill->defense}}</li>
+        </ul>
+    @endforeach --}}
 </body>
 </html>
