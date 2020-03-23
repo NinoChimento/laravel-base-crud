@@ -24,7 +24,7 @@ class GameControllers extends Controller
      */
     public function create()
     {
-        //
+        return view("skillCreate");
     }
 
     /**
