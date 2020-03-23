@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <title>Document</title>
 </head>
 <body>
-    <form action="{{route("skills.store")}}" method="POST">
+    <form class="form-group" action="{{route("skills.store")}}" method="POST">
         @csrf
         @method("POST")
-        <input type="text" name = "name" value="" placeholder="name">
-        <input type="number" name = "lifePoints" value="" placeholder="life">
-        <input type="text" name = "role" value="" placeholder="role">
-        <input type="number" name = "attack" value="" placeholder=" val attack">
-        <input type="number" name = "defense" value="" placeholder="val defense">
-        <button type="submit">Crea</button>
+        <input class ="form-control" type="text" name = "name" value="" placeholder="name">
+        <input  class ="form-control" type="number" name = "lifePoints" value="" placeholder="life">
+        <input  class ="form-control" type="text" name = "role" value="" placeholder="role">
+        <input  class ="form-control" type="number" name = "attack" value="" placeholder=" val attack">
+        <input  class ="form-control" type="number" name = "defense" value="" placeholder="val defense">
+        <button class="btn btn-danger" type="submit">Crea</button>
     </form>
     {{-- @foreach ($skills as $skill)
         <ul>
