@@ -27,6 +27,7 @@
         <input  class ="form-control" type="text" name = "role" value="" placeholder="role">
         <input  class ="form-control" type="number" name = "attack" value="" placeholder=" val attack">
         <input  class ="form-control" type="number" name = "defense" value="" placeholder="val defense">
+        <input  class ="form-control" type="text" name = "img" value="{{$skill->img}}" placeholder=" img ">
         <button class="btn btn-danger" type="submit">Crea</button>
     </form>
     {{-- @foreach ($skills as $skill)

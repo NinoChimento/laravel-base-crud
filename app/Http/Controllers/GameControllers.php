@@ -125,10 +125,11 @@ class GameControllers extends Controller
      */
     public function destroy(Skill $skill)
     {
+
         $response = $skill->delete();
         if($response){
-            $skills = Skill::all();
-            return view("skillsIndex",compact("skills"));
+            // $skills = Skill::all();
+            return redirect("skillsIndex")->with("delete",$skill);
         }
         else {
             abort("404 eliminazione non riuscita");

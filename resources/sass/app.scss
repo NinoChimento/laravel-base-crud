@@ -1,4 +1,4 @@
-@import "~bootstrap/scss/bootstrap";
+
 *{
     margin: 0;
     padding: 0;
@@ -14,3 +14,7 @@ body {
         width: 30%;
     }
 }
+#image {
+    width: 200px;
+}
+@import "~bootstrap/scss/bootstrap";

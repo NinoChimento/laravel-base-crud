@@ -1,5 +1,28 @@
 @charset "UTF-8";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+.wrap-skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrap-skills .skill {
+  width: 30%;
+}
+
+#image {
+  width: 200px;
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -10880,24 +10903,5 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  width: 100%;
-}
-
-.wrap-skills {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.wrap-skills .skill {
-  width: 30%;
 }
 

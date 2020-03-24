@@ -8,7 +8,15 @@
     <title>Document</title>
 </head>
 <body>
-    
+    @if ($errors->any())
+      <div class="alert alert-danger">
+          <ul>
+             @foreach ($errors->all() as $error)
+               <li>{{ $error }}</li>
+            @endforeach
+          </ul>
+       </div>
+    @endif
         <h1>Update</h1>
 <form class="form-group" action="{{route("skills.update", $skill)}}" method="POST">
         @csrf
@@ -17,6 +25,7 @@
         <input  class ="form-control" type="number" name = "lifePoints" value="{{$skill->lifePoints}}" placeholder="life">
         <input  class ="form-control" type="text" name = "role" value="{{$skill->role}}" placeholder="role">
         <input  class ="form-control" type="number" name = "attack" value="{{$skill->attack}}" placeholder=" val attack">
+        <input  class ="form-control" type="text" name = "img" value="{{$skill->img}}" placeholder=" img ">
         <input  class ="form-control" type="number" name = "defense" value="{{$skill->defense}}" placeholder="val defense">
         <button class="btn btn-danger" type="submit">Crea</button>
     </form>

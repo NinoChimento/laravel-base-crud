@@ -11,6 +11,7 @@ class Skill extends Model
         "lifePoints",
         "role",
         "attack",
-        "defense"
+        "defense",
+        "img"
     ];
 }

@@ -12,7 +12,7 @@
         {{-- @foreach ($skills as $skill) --}}
              
            <div class="card" >
-               <img class="card-img-top" src="" alt="">
+           <img id="image" class="card-img-top" src="{{$skill->img}}" alt="">
                <div class="card-body">
                <h2 class="card-title"> Name : {{$skill->name}}</h2>
                <h3> Role :  {{$skill->role}}</h3>
@@ -20,7 +20,7 @@
                <p class="card-text"> Attack : {{$skill->attack}}</p>
                <p class="card-text"> Defense :{{$skill->defense}}</p>
                <a href="{{route("skills.index")}}" class="btn btn-primary">Home</a>
-               <button id="{{$skill->id}}" disabled=""></button>
+               {{-- <button id="{{$skill->id}}" disabled=""></button> --}}
                </div>
             </div>
         {{-- @endforeach --}}
