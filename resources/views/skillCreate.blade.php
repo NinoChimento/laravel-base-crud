@@ -18,7 +18,7 @@
           </ul>
        </div>
     @endif
-
+       <h1>Create</h1>
     <form class="form-group" action="{{route("skills.store")}}" method="POST">
         @csrf
         @method("POST")

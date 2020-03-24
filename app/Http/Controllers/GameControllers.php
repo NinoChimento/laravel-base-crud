@@ -85,9 +85,14 @@ class GameControllers extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Skill $skill)
     {
-        //
+        // if(empty($skill)){
+        //     abort("404 non hai isnerito un id valido");
+        // }
+        
+            return view("skillUptade",compact("skill"));
+        
     }
 
     /**
