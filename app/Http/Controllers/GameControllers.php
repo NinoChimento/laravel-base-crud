@@ -53,7 +53,8 @@ class GameControllers extends Controller
         $load = $skill->save();
        
         if ($load){
-            return redirect()->route("skills.index");
+            $skill = Skill::all()->last();
+            return redirect()->route("skills.show",compact("skill"));
            
         } else {
           
@@ -68,9 +69,14 @@ class GameControllers extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Skill $skill)
     {
-        //
+        if(empty($skill)){
+            abort("404 non c'e nessun id inserito");
+        }
+        else {
+            return view("skillShow",compact("skill"));
+        }
     }
 
     /**
