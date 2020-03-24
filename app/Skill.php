@@ -10,7 +10,7 @@ class Skill extends Model
         "name",
         "lifePoints",
         "role",
-        "atack",
+        "attack",
         "defense"
     ];
 }

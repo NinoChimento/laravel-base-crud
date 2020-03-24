@@ -8,6 +8,17 @@
     <title>Document</title>
 </head>
 <body>
+
+    @if ($errors->any())
+      <div class="alert alert-danger">
+          <ul>
+             @foreach ($errors->all() as $error)
+               <li>{{ $error }}</li>
+            @endforeach
+          </ul>
+       </div>
+    @endif
+
     <form class="form-group" action="{{route("skills.store")}}" method="POST">
         @csrf
         @method("POST")

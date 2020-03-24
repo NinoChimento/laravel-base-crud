@@ -36,15 +36,22 @@ class GameControllers extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        $skill = new Skill;
+        // validazione dato 
+        $request->validate([
+            "name"=> 'required|max:255',
+            "lifePoints" => 'required|numeric|min:1|max:9999',
+            "role"=> 'required|string|max:255',
+            "attack"=> 'required|numeric',
+            "defense" => 'required|numeric',
+        ]);
 
-        $skill->name = $data["name"];
-        $skill->lifePoints = $data["lifePoints"];
-        $skill->role = $data["role"];
-        $skill->attack = $data["attack"];
-        $skill->defense = $data["defense"];
+
+        $skill = new Skill;
+        $skill->fill($data);
+      
         
         $load = $skill->save();
+       
         if ($load){
             return redirect()->route("skills.index");
            
