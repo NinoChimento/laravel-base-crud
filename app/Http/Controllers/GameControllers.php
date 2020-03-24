@@ -109,7 +109,10 @@ class GameControllers extends Controller
     {
         $skill = Skill::find($id);
         $data = $request->all();
-
+        //controllo dati
+        $request->validate($this->control);
+        //modifico i dati 
+        $skill->update($data);
         return view("skillShow",compact("skill"));
       
     }
