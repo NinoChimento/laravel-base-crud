@@ -20,7 +20,12 @@
                <p class="card-text"> LIfe Pints :{{$skill->lifePoints}}</p>
                <p class="card-text"> Attack : {{$skill->attack}}</p>
                <p class="card-text"> Defense :{{$skill->defense}}</p>
-               <a href="{{route("skills.edit",$skill)}}" class="btn btn-primary">Uptade</a>
+               <a href="{{route("skills.edit",$skill)}}" class="btn btn-primary m-2">Uptade</a>
+               <form action="{{route("skills.destroy",$skill)}}" method="POST">
+                 @csrf
+                 @method("DELETE")
+                 <button  class="btn btn-danger m-2" type="submit">DELETE</button>
+               </form>
                <button id="{{$skill->id}}" disabled="disabled"></button>
                </div>
             </div>

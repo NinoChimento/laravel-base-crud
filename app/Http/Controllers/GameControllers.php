@@ -123,8 +123,15 @@ class GameControllers extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Skill $skill)
     {
-        //
+        $response = $skill->delete();
+        if($response){
+            $skills = Skill::all();
+            return view("skillsIndex",compact("skills"));
+        }
+        else {
+            abort("404 eliminazione non riuscita");
+        }
     }
 }
