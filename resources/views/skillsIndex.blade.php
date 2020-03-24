@@ -20,7 +20,7 @@
                <p class="card-text"> LIfe Pints :{{$skill->lifePoints}}</p>
                <p class="card-text"> Attack : {{$skill->attack}}</p>
                <p class="card-text"> Defense :{{$skill->defense}}</p>
-               <a href="" class="btn btn-primary">Uptade</a>
+               <a href="{{route("skills.edit",$skill)}}" class="btn btn-primary">Uptade</a>
                <button id="{{$skill->id}}" disabled="disabled"></button>
                </div>
             </div>

@@ -9,10 +9,10 @@
 </head>
 <body>
     
-        <h1>Uptade</h1>
-     <form class="form-group" action="{{route("skills.store")}}" method="POST">
+        <h1>Update</h1>
+<form class="form-group" action="{{route("skills.update", $skill)}}" method="POST">
         @csrf
-        @method("POST")
+        @method("PATCH")
      <input class ="form-control" type="text" name = "name" value="{{$skill->name}}" placeholder="name">
         <input  class ="form-control" type="number" name = "lifePoints" value="{{$skill->lifePoints}}" placeholder="life">
         <input  class ="form-control" type="text" name = "role" value="{{$skill->role}}" placeholder="role">

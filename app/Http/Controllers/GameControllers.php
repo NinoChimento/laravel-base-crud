@@ -12,6 +12,15 @@ class GameControllers extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public $control = [
+        "name" => 'required|max:255',
+        "lifePoints" => 'required|numeric|min:1|max:9999',
+        "role" => 'required|string|max:255',
+        "attack" => 'required|numeric',
+        "defense" => 'required|numeric',
+     ];
+
     public function index()
     {   
         $skills = Skill::all();
@@ -37,13 +46,7 @@ class GameControllers extends Controller
     {
         $data = $request->all();
         // validazione dato 
-        $request->validate([
-            "name"=> 'required|max:255',
-            "lifePoints" => 'required|numeric|min:1|max:9999',
-            "role"=> 'required|string|max:255',
-            "attack"=> 'required|numeric',
-            "defense" => 'required|numeric',
-        ]);
+        $request->validate($this->control);
 
 
         $skill = new Skill;
@@ -104,7 +107,11 @@ class GameControllers extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $skill = Skill::find($id);
+        $data = $request->all();
+
+        return view("skillShow",compact("skill"));
+      
     }
 
     /**
