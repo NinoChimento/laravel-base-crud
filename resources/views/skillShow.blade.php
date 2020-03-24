@@ -19,8 +19,8 @@
                <p class="card-text"> LIfe Pints :{{$skill->lifePoints}}</p>
                <p class="card-text"> Attack : {{$skill->attack}}</p>
                <p class="card-text"> Defense :{{$skill->defense}}</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-               <button id="{{$skill->id}}" disabled="disabled"></button>
+               <a href="{{route("skills.index")}}" class="btn btn-primary">Home</a>
+               <button id="{{$skill->id}}" disabled=""></button>
                </div>
             </div>
         {{-- @endforeach --}}

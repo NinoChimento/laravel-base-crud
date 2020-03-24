@@ -14,11 +14,11 @@ class GameControllers extends Controller
      */
 
      public $control = [
-        "name" => 'required|max:255',
+        "name" => 'required|string|max:255',
         "lifePoints" => 'required|numeric|min:1|max:9999',
         "role" => 'required|string|max:255',
-        "attack" => 'required|numeric',
-        "defense" => 'required|numeric',
+        "attack" => 'required|numeric|min:1|max:9999',
+        "defense" => 'required|numeric|min:1|max:9999',
      ];
 
     public function index()
@@ -90,9 +90,9 @@ class GameControllers extends Controller
      */
     public function edit(Skill $skill)
     {
-        // if(empty($skill)){
-        //     abort("404 non hai isnerito un id valido");
-        // }
+        if(empty($skill)){
+            abort("404 non hai isnerito un id valido");
+        }
         
             return view("skillUptade",compact("skill"));
         

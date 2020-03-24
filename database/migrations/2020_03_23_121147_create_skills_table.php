@@ -17,7 +17,7 @@ class CreateSkillsTable extends Migration
             $table->id();
             $table->char("name",20);
             $table->bigInteger("lifePoints");
-            $table->char("role",20);
+            $table->char("role",200);
             $table->bigInteger("attack");
             $table->bigInteger("defense");
             $table->timestamps();
